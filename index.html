@@ -33,7 +33,7 @@
             </div>
             <div class="flex flex-col lg:flex-row gap-2">
                 <img src="assets/coin.png" alt="">
-                <p><span>500</span> BDT</p>
+                <p><span id="my-balance">5000</span> BDT</p>
             </div>
         </div>
     </header>
@@ -41,12 +41,12 @@
     <main>
         <!-- Donation & History button -->
         <div class="flex justify-center gap-4 mb-10 ">
-            <button class="rounded-lg border border-[#B4F461] bg-[#B4F461] px-4 py-2 font-semibold text-xl">Donation</button>
-            <button class="rounded-lg border border-cyan-900  px-4 py-2 font-semibold text-xl">History</button>
+            <button id="donation-button" class="rounded-lg border border-[#B4F461] bg-[#B4F461] px-4 py-2 font-semibold text-xl">Donation</button>
+            <button id="history-button" class="rounded-lg border border-cyan-900  px-4 py-2 font-semibold text-xl">History</button>
         </div>
 
         <!-- donation card  -->
-        <div class="max-w-6xl mx-auto">
+        <div id="donation-card" class="max-w-6xl mx-auto">
             <!-- card 1 -->
             <div class="flex flex-col gap-5 mx-3 lg:flex-row border rounded-2xl p-8 mb-6 lg:mx-0">
                 <div>
@@ -56,14 +56,14 @@
                     <div>
                         <div class="flex flex-row gap-2 items-center border bg-slate-100 rounded-2xl p-2 max-w-28">
                             <img src="assets/coin.png" alt="">
-                            <p><span>0</span> BDT</p>
+                            <p><span id="current-balance1">0</span> BDT</p>
                         </div>
                         <h1 class="font-bold text-xl py-2">Donate for Flood at Noakhali, Bangladesh</h1>
                         <p class="py-5"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     </div>
                     <div class="flex flex-col gap-5">
-                        <input class="border rounded-lg p-4" type="text" name="" id="" placeholder="write Donation Amount">
-                        <button class="bg-[#B4F461] p-3 font-semibold text-xl rounded-lg">Donate Now</button>
+                        <input id="flood1" class="border rounded-lg p-4" type="text" name="" id="" placeholder="write Donation Amount">
+                        <button id="button1" class="bg-[#B4F461] p-3 font-semibold text-xl rounded-lg">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -77,14 +77,14 @@
                     <div>
                         <div class="flex flex-row gap-2 items-center border bg-slate-100 rounded-2xl p-2 max-w-32">
                             <img src="assets/coin.png" alt="">
-                            <p><span>10</span> BDT</p>
+                            <p><span id="current-balance2">10</span> BDT</p>
                         </div>
-                        <h1 class="font-bold text-xl py-2">Donate for Flood Relief in Feni Bangladesh</h1>
+                        <h1 class="font-bold text-xl py-2">Donate for Flood Relief in Feni, Bangladesh</h1>
                         <p class="py-5"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     </div>
                     <div class="flex flex-col gap-5">
-                        <input class="border rounded-lg p-4" type="text" name="" id="" placeholder="write Donation Amount">
-                        <button class="bg-[#B4F461] p-3 font-semibold text-xl rounded-lg">Donate Now</button>
+                        <input id="flood2" class="border rounded-lg p-4" type="text" name="" id="" placeholder="write Donation Amount">
+                        <button id="button2" class="bg-[#B4F461] p-3 font-semibold text-xl rounded-lg">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -97,23 +97,33 @@
                     <div>
                         <div class="flex flex-row gap-2 items-center border bg-slate-100 rounded-2xl p-2 max-w-32">
                             <img src="assets/coin.png" alt="">
-                            <p><span>100</span> BDT</p>
+                            <p><span id="current-balance3">100</span> BDT</p>
                         </div>
                         <h1 class="font-bold text-xl py-2">Aid for Injured in the Quota Movement</h1>
                         <p class="py-5"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     </div>
                     <div class="flex flex-col gap-5">
-                        <input class="border rounded-lg p-4" type="text" name="" id="" placeholder="write Donation Amount">
-                        <button class="bg-[#B4F461] p-3 font-semibold text-xl rounded-lg">Donate Now</button>
+                        <input id="flood3" class="border rounded-lg p-4" type="text" name="" id="" placeholder="write Donation Amount">
+                        <button id="button3" class="bg-[#B4F461] p-3 font-semibold text-xl rounded-lg">Donate Now</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Transaction History -->
+        <div id="transaction-history" class="hidden flex flex-col text-center gap-2">
+            <div class="divider"></div>
+            <h1 class="font-bold text-2xl border rounded-lg p-2 bg-blue-600 text-white max-w-96 mx-auto">Transaction History</h1>
+            
+        </div>
         <div class="divider"></div>
+        
     </main>
     <footer class="bg-slate-300 py-8 px-2 flex justify-center">
         <p>Copyright © All right reserved by Yousuf Sarker.</p>
     </footer>
+    
+    <!-- script files -->
+    <script src="JS/scripts.js"></script>
 </body>
 </html>
