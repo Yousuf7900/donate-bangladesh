@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/coin.png" type="image/x-icon">
 
     <style>
         .default-font {
@@ -40,9 +41,29 @@
 
     <main>
         <!-- Donation & History button -->
-        <div class="flex justify-center gap-4 mb-10 ">
+        <div class="flex justify-center gap-4 mb-10">
             <button id="donation-button" class="rounded-lg border border-[#B4F461] bg-[#B4F461] px-4 py-2 font-semibold text-xl">Donation</button>
             <button id="history-button" class="rounded-lg border border-cyan-900  px-4 py-2 font-semibold text-xl">History</button>
+
+            <!-- modal -->
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_1" class="modal">
+            <div class="modal-box flex flex-col justify-center items-center text-center">
+                <h3 class="text-3xl font-bold pb-4">Congrates!</h3>
+                <div id="modal-amount" class="flex flex-row items-center gap-2">
+                    <img class="" src="assets/coin.png" alt="">
+                    
+                </div>
+                <p class="py-4">You have donated for humankind</p>
+                <h4 class="text-3xl font-bold">Successfully</h4>
+                <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-success text-white">Thank You</button>
+                </form>
+                </div>
+            </div>
+            </dialog>
         </div>
 
         <!-- donation card  -->
@@ -58,7 +79,7 @@
                             <img src="assets/coin.png" alt="">
                             <p><span id="current-balance1">0</span> BDT</p>
                         </div>
-                        <h1 class="font-bold text-xl py-2">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <h1 class="font-bold text-xl py-2">Donate for <span id="text1">Flood at Noakhali, Bangladesh</span></h1>
                         <p class="py-5"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     </div>
                     <div class="flex flex-col gap-5">
@@ -79,7 +100,7 @@
                             <img src="assets/coin.png" alt="">
                             <p><span id="current-balance2">10</span> BDT</p>
                         </div>
-                        <h1 class="font-bold text-xl py-2">Donate for Flood Relief in Feni, Bangladesh</h1>
+                        <h1 class="font-bold text-xl py-2">Donate for <span id="text2">Flood Relief in Feni, Bangladesh</span></h1>
                         <p class="py-5"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     </div>
                     <div class="flex flex-col gap-5">
@@ -99,7 +120,7 @@
                             <img src="assets/coin.png" alt="">
                             <p><span id="current-balance3">100</span> BDT</p>
                         </div>
-                        <h1 class="font-bold text-xl py-2">Aid for Injured in the Quota Movement</h1>
+                        <h1 class="font-bold text-xl py-2">Aid for <span id="text3">Injured in the Quota Movement</span></h1>
                         <p class="py-5"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     </div>
                     <div class="flex flex-col gap-5">
@@ -110,12 +131,16 @@
             </div>
         </div>
 
-        <!-- Transaction History -->
+
+        <!-- Transaction History start -->
         <div id="transaction-history" class="hidden flex flex-col text-center gap-2">
             <div class="divider"></div>
             <h1 class="font-bold text-2xl border rounded-lg p-2 bg-blue-600 text-white max-w-96 mx-auto">Transaction History</h1>
             
         </div>
+
+        <!-- Transaction history end -->
+        
         <div class="divider"></div>
         
     </main>
